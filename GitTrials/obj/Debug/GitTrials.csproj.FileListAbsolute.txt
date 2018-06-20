@@ -1,0 +1,16 @@
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\bin\Debug\GitTrials.exe.config
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\bin\Debug\GitTrials.exe
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\bin\Debug\GitTrials.pdb
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\obj\Debug\GitTrials.csprojResolveAssemblyReference.cache
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\obj\Debug\GitTrials.exe
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\obj\Debug\GitTrials.pdb
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\bin\Debug\NativeBinaries\amd64\git2-921e3a6.dll
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\bin\Debug\NativeBinaries\amd64\git2-921e3a6.pdb
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\bin\Debug\NativeBinaries\x86\git2-921e3a6.dll
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\bin\Debug\NativeBinaries\x86\git2-921e3a6.pdb
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\bin\Debug\NativeBinaries\osx\libgit2-921e3a6.dylib
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\bin\Debug\NativeBinaries\linux\amd64\libgit2-921e3a6.so
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\bin\Debug\LibGit2Sharp.dll.config
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\bin\Debug\LibGit2Sharp.dll
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\bin\Debug\LibGit2Sharp.pdb
+C:\Users\Çağdaş\Documents\Visual Studio 2015\Projects\GitTrials\GitTrials\bin\Debug\LibGit2Sharp.xml
