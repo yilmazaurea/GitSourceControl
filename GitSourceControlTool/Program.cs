@@ -15,17 +15,17 @@ namespace GitSourceControlTool
 {
     class Program
     {
+        //static void Main(string[] args) // for tests
+        //{
+        //    ILogger logger = new ConsoleLogger();
+        //    GitSourceControlProvider pro = new GitSourceControlProvider("https://github.com/CagdasTrials/Trials.git", "CagdasTrials","---", logger);
+        //    pro.LoadWorkspace(@"D:\GitRepos\RepoX");
+        //    pro.DeleteServerItemsWhichHaveNoLocalItems();
+
+        //    string xx = "";
+        //}
+
         static void Main(string[] args)
-        {
-            ILogger logger = new ConsoleLogger();
-            GitSourceControlProvider pro = new GitSourceControlProvider("https://github.com/CagdasTrials/Trials.git", "CagdasTrials","15feposea", logger);
-            pro.LoadWorkspace(@"D:\GitRepos\RepoX");
-            pro.DeleteServerItemsWhichHaveNoLocalItems();
-
-            string xx = "";
-        }
-
-        static void Main2(string[] args)
         {
             var logger = new ConsoleLogger();
 
@@ -61,21 +61,49 @@ namespace GitSourceControlTool
 
             ISourceControlProvider provider;
 
-            try
-            {
-                provider = new TfsSourceControlProvider(
-                parameters.ServerUri,
-                parameters.User,
-                parameters.Password,
-                logger
-             );
+            bool useGit = false;
 
+            if (string.IsNullOrEmpty(parameters.SourceControl))
+            {
+                if (parameters.SourceControl.ToLower() == "git")
+                {
+                    useGit = true;
+                }
             }
-            catch (TeamFoundationServerUnauthorizedException)
-            {
-                logger.LogError("Could not connect to Source Control with providere credentials");
 
-                return;
+            if (useGit)
+            {
+                try
+                {
+                    provider = new GitSourceControlProvider(
+                        parameters.ServerUri,
+                        parameters.User,
+                        parameters.Password,
+                        logger
+                        );
+                }
+                catch (Exception e)
+                {
+                    logger.LogError(e.Message);
+                    return;
+                }
+            }
+            else
+            {
+                try
+                {
+                    provider = new TfsSourceControlProvider(
+                        parameters.ServerUri,
+                        parameters.User,
+                        parameters.Password,
+                        logger
+                        );
+                }
+                catch (TeamFoundationServerUnauthorizedException)
+                {
+                    logger.LogError("Could not connect to Source Control with providere credentials");
+                    return;
+                }
             }
 
             var merger = new DifferencesMerger(provider, logger);

@@ -11,5 +11,7 @@
         public string Password { get; set; }
 
         public string Comment { get; set; }
+
+        public string SourceControl { get; set; }
     }
 }

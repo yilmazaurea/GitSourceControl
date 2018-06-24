@@ -35,10 +35,12 @@ namespace GitSourceControl.SourceControlProvider
         public GitSourceControlProvider(string gitServerUri, string userName, string password, ILogger logger)
         {
             _logger = logger;
-            _credentials = new GitCredentials();
-            _credentials.GitServerUri = gitServerUri;
-            _credentials.Username = userName;
-            _credentials.Password = password;
+            _credentials = new GitCredentials
+            {
+                GitServerUri = gitServerUri,
+                Username = userName,
+                Password = password
+            };
         }
 
         // ok - tested
@@ -168,7 +170,7 @@ namespace GitSourceControl.SourceControlProvider
         {
             if (e.Exception != null)
             {
-                Logger.LogError(e.Exception.Message);
+                _logger.LogError(e.Exception.Message);
             }
         }
 
